@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PANDORA'S CONCEPT</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/BlackPink.css' %}">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+</head>
+<body>
+      <div class="header container-fluid px-0">
+        <nav class="navbar navbar-expand-md justify-content-center navbar-dark fixed-top">
+            <a class="navbar-brand" href="#" style="font-family: 'Stick', sans-serif; font-size: 30px; font-weight: bold;"><span style="color: #D6A2E8;">Pandora's</span><span style="color: #d1d8e0 "> Concept</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="my menu">
+                <ul class="navbar-nav justify-content-center">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-target="submenu" data-toggle="dropdown">Services</a>
+                        <div class="dropdown-menu" id="submenu">
+                            <a href="#Ticket" class="dropdown-item">Book Ticket </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="" class="dropdown-item">Shop</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="/pro" class="dropdown-item">Drink & Food</a>
+
+
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link dropdown-toggle" href="{% url 'artist' %} "target="_blank">Artists</a>
+
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="{% url 'aboutUs'%}" target="_blank">About Us</a></li>
+
+
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contact'%}">Contact
+					</a></li>
+
+                </ul>
+            </div>
+    <div class="form-inline my-2 my-lg-0" >
+            <a href="{% url 'cart' %}">
+                <i id="cart-icon" class="fa fa-shopping-cart" style="width: 25px; height: 25px; color: #acacac"></i>
+        </a>
+
+        <p id="cart-total">{{cartItems}}</p>
+           </div>
+            <nav class="navbar navbar-expand-sm">
+                <form class="form-inline" action="{% url 'search' %}" method="post">
+                    {% csrf_token %}
+                    <i class="fa fa-search"></i>
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="searched">
+
+                </form>
+            </nav>
+
+            <div class="log">
+                {% if user.username %}
+                    <p style="color: #D6A2E8; font-family: 'Roboto', sans-serif;" >Xin chào, <a style="color: #D6A2E8; font-family: 'Roboto', sans-serif;" href="{% url 'profile' %}">{{ user.username }}</a></p>
+                    <p><a href="{% url 'logout' %}" class="logOut">LOGOUT</a></p>
+                {% else %}
+                    <p><a class="logIn" href="{% url 'login' %}">LOGIN</a> <a class="signUp" href="{% url 'register' %}">SIGN UP</a></p>
+                {% endif %}
+            </div>
+        </nav>
+
+    </div>
+
+    <section>
+        <div id="banner1">
+        {%block content %}
+
+        {% endblock %}
+        </div>
+    </section>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+ <script type="text/javascript" src=" {% static 'js/cart.js' %}"></script>
+</body>
+</html>

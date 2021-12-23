@@ -1,0 +1,514 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*-------------------header-----------------*/
+
+.navbar .navbar-brand {
+    margin: 30px 80px;
+}
+
+li a #submenu .dropdown-item {
+    color: #000 !important;
+}
+
+.navbar ul li a {
+    padding-right: 10px;
+    color: #D6A2E8 !important;
+    align-items: center;
+    font-size: 18px;
+    margin-right: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Fredoka One', cursive;
+}
+
+.navbar ul li a:hover {
+    color: #ff006e !important;
+    opacity: 1;
+}
+
+.navbar input {
+    border-radius: 5px;
+    padding-left: 5px;
+    margin-right: 10px;
+    display: flex;
+    width: 150px;
+    height: 40px;
+    border: none;
+}
+
+.navbar .logIn,
+.signUp {
+    text-decoration: none;
+    color: #D6A2E8;
+    font-size: 17px;
+    border: none;
+    padding: 10px 10px;
+    outline: none;
+    font-weight: bold;
+    font-family: 'Fredoka One', cursive;
+}
+
+.navbar .logIn:hover {
+    color: #ff006e;
+    text-decoration: none;
+}
+.navbar .logOut:hover {
+    color: #ff006e;
+    text-decoration: none;
+}
+
+.navbar .signUp:hover {
+    color: #ff006e;
+    text-decoration: none;
+}
+
+.navbar-toggle {
+    justify-content: center;
+}
+
+
+/*-----------------banner---------------*/
+
+#banner {
+    background: url('../img/banner.gif');
+    background-position: center;
+    background-size: cover;
+    max-height: 100vh;
+    padding: 300px 60px;
+    color: #fff;
+    line-height: 30px;
+    margin-top: -25px;
+    font-family: 'Fredoka One', cursive;
+}
+
+#banner .container {
+    margin-top: -100px;
+}
+
+#banner .container h1 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 45px;
+}
+
+
+
+.icon .seperator {
+    border-bottom: 2px solid #fff;
+    position: relative;
+    display: inline-block;
+    margin-right: 30px;
+    width: 200px;
+    margin-bottom: 12px;
+}
+
+.icon .fa {
+    margin-right: 30px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.navbar form {
+    position: relative;
+}
+
+.navbar form i {
+    position: absolute;
+    left: 15px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+}
+
+.navbar .form-inline input {
+    padding-left: 25px;
+}
+
+.navbar .form-inline {
+    /*margin-left: 150px;*/
+}
+
+
+/*-------------section count down-----------------------*/
+
+.time {
+    height: 250px;
+    font-family: 'Fredoka One', cursive;
+    color: #fff;
+    position: relative;
+    background: linear-gradient(50deg, #42275a, #734b6d);
+}
+
+.time p {
+    display: inline-flex;
+    font-size: 80px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.contain1 p {
+    color: #000;
+    display: inline-flex;
+    position: absolute;
+}
+
+
+/*--------------------- container1----------------- */
+
+.container1 {
+    margin: 50px 50px;
+}
+
+.container1 .sub-title {
+    position: relative;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 600;
+    font-style: normal;
+    padding-left: 70px;
+    display: inline-block;
+}
+.container1 .sub-title::before{
+    content: '';
+    display: block;
+    width: 55px;
+    height: 2px;
+    background-color: #ff006e;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+}
+/*-------------- feature -------------------*/
+.pc .container{
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 576px){
+    .container, .container-sm{
+        min-width: 540px;
+    }
+}
+.pc .area-box{
+    padding: 30px 30px;
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+    box-shadow: 0 25px 98px 0 rgb(0 0 0 / 3%);
+    background-color: #fff;
+    line-height: 40px;
+
+}
+.pc .area-box:hover{
+    color: #fff;
+    background-color: #000;
+
+}
+.pc .area-box .title-head{
+    color:#ff006e;
+    text-decoration: none;
+    font-weight: 700;
+}
+.pc .area-box .title-head:hover{
+    color: #ff006e;
+
+}
+.pc .grids-feature span.fa{
+    background: #ff006e;
+    font-size: 26px;
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    color: #fff;
+    text-align: center;
+    margin-top: 30px 0;
+    border-radius: 50%;
+}
+/*----------------eventPrice-------------*/
+.pricing-columns .container .sub-title{
+    position: relative;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 600;
+    font-style: normal;
+    padding-left: 70px;
+    display: inline-block;
+    color: #ff006e;
+}
+.pricing-columns .container .sub-title::before{
+    content: '';
+    display: block;
+    width: 55px;
+    height: 2px;
+    background-color: #ff006e;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+}
+.pricing-columns .pricing-chart .popular{
+    position: relative;
+    background-color: #f7f7f7;
+    padding: 3em;
+    margin-top: 2em;
+    text-align: center;
+    border-radius: 8px;
+    
+}
+.pricing-columns .pricing-chart .popular .pop-serv{
+    color: #ff006e;
+    font-size: 16px;
+    font-weight: 600;
+    background: #fff;
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 36px;
+}
+.pricing-columns .pricing-chart .serv ul li{
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #acacac;
+   /* text-decoration: none;*/
+    list-style: none;
+}
+.pricing-columns .pricing-chart .serv .price .amount{
+    font-size: 40px;
+    font-weight: 700;
+
+}
+.pricing-columns .pricing-chart .serv .btn {
+    background: transparent;
+    color: #ff006e;
+    border: 1px solid #ff006e;
+    width: 200px;
+    height: 50px;
+    font-size: 22px;
+    font-weight: 700;
+}
+.pricing-columns .pricing-chart .serv .btn:hover{
+    color: #fff;
+    background-color: #ff006e;
+}
+/*---------------Join now-----------------*/
+.middle{
+    background: url(../img/music_fes.jpg) no-repeat 0px 0px;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    background-attachment: fixed;
+}
+.middle .container .sub-title{
+    position: relative;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 600;
+    font-style: normal;
+    padding-left: 70px;
+    display: inline-block;
+    color: #ff006e;
+}
+.middle .container .sub-title::before{
+    content: '';
+    display: block;
+    width: 55px;
+    height: 2px;
+    background-color: #ff006e;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+}
+.btn-style{
+     background: transparent;
+    color: #ff006e;
+    border: 1px solid #ff006e;
+    width: 200px;
+    height: 50px;
+    font-size: 22px;
+    font-weight: 700;
+}
+.btn-style:hover{
+    color: #fff;
+    background-color: #ff006e;
+}
+/*-------------artist_contact--------------*/
+
+.instagram-feeds .artistContact-grids-info{
+    position: relative;
+}
+.instagram-feeds .artistContact-grids-info:hover .content-overlay{
+    opacity: 1;
+
+}
+.instagram-feeds{
+    display: grid; /*he thong bo cuc dua tren luoi, voi cac hang va cot*/
+     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+     /*tao vung luoi chua 9 cot*/
+     grid-gap: 0px; /*khoang cach giua cac hang va cot*/
+
+}
+.instagram-feeds .artistContact-grids-info .content-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.instagram-feeds .content-detail {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.instagram-feeds .artistContact-grids-info:hover .content-detail {
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+
+.instagram-feeds .content-detail h4 {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.instagram-feeds .content-detail span.fa {
+  color: #fff;
+  font-size: 36px;
+  margin-bottom: 0px;
+}
+
+.instagram-feeds .fadeIn-bottom {
+  top: 80%;
+}
+
+.instagram-feeds .fadeIn-top {
+  top: 20%;
+}
+
+.instagram-feeds .fadeIn-left {
+  left: 20%;
+}
+
+.instagram-feeds .fadeIn-right {
+  left: 80%;
+}
+
+@media (max-width: 668px) {
+  .instagram-feeds .content-detail span.fa {
+    font-size: 20px;
+    margin-bottom: 0px;
+  }
+}
+
+/*----------------drink and food-------------------*/
+
+/*-----------------footer------------------*/
+
+footer {
+    background: linear-gradient(50deg, #42275a, #734b6d);
+    color: #acacac;
+}
+
+footer .container {
+    display: flex;
+    margin: 20px;
+}
+
+footer .cot1 {
+
+    margin-right: 20px;
+}
+
+.cot1 .contact_footer li i {
+    text-decoration: none;
+    list-style: none;
+}
+
+footer .cot2 {
+    width: 50%;
+    margin-right: 20px;
+}
+
+footer .cot2 ul li i:hover {
+    color: #fff;
+}
+
+footer .cot2 ul li a {
+    color: #acacac;
+}
+
+footer .cot2 ul li a:hover {
+    color: #fff !important;
+}
+
+@media (max-width: 720px) {
+    footer .container {
+        flex-direction: column;
+    }
+    footer .cot {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+footer .input_contact {
+    text-align: left;
+}
+
+footer .input_contact input {
+    padding: 5px 20px;
+    border: none;
+    border-radius: 3px;
+    margin-top: 20px;
+}
+
+footer .input_contact .send {
+    color: #fff;
+    font-size: 15px;
+    margin-top: 20px;
+    padding: 8px 25px;
+    border-radius: 6px;
+    border: none;
+    background: #e84393;
+    font-family: 'Fredoka One', cursive;
+}
+
+footer .input_contact .send:hover {
+    color: #fff;
+    background: green;
+}
+
+footer .input_contact2 input {
+    padding: 40px 160px;
+
+
+}

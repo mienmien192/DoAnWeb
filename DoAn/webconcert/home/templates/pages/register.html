@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pandora's Concert - Đăng ký</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
+    <style>
+        *{
+			padding: 0px;
+			margin: 0px;
+		}
+		body{
+			background: url("{% static 'img/banner.gif'%}");
+			background-size: cover;
+		}
+		.content{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 350px;
+			height: 420px;
+			background: rgba(255,255,255,.2);
+			margin: 0 auto;
+			border-radius: 20px;
+            padding-bottom: 170px;
+			padding-top: 50px;
+		}
+		.content form{
+			padding-left: 40px;
+            font-family: 'Stick', sans-serif;
+
+		}
+		.content h3{
+			text-align: center;
+			font-size: 25px;
+			color: #D6A2E8;
+			font-family: 'Stick', sans-serif;
+			margin-bottom: 35px;
+		}
+		.content input[type='text'], .content input[type='password'], .content input[type='email']{
+			width: 90%;
+			background: transparent;
+			border: none;
+			font-size: 20px;
+			outline: none;
+			color: #f4e5e2;
+			padding: 5px 0px;
+			border-bottom: solid 1px #fff;
+			margin-bottom: 35px;
+		}
+
+		.content input[type='submit']{
+			width:90%;
+			padding: 10px 10px;
+			background: #D6A2E8;
+			border-radius: 30px;
+			border:none;
+			font-size: 20px;
+			margin-bottom: 100px;
+			margin-top: 30px;
+            font-family: 'Stick', sans-serif;
+		}
+		.content input[type='submit']:hover{
+
+			background: #ff006e;
+			color: #fff;
+		}
+		.content a{
+			color: #fff;
+			text-decoration: none;
+            font-family: 'Stick', sans-serif;
+		}
+		.content a:hover{
+			color: #ff006e;
+		}
+
+		.content label{
+            color:#D6A2E8;
+		}
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h3>Welcome to our website: Pandora's Company</h3>
+        <form action="." method="post">
+            {% csrf_token %}
+<!--            yeu cầu bảo mật thông tin-->
+            {{form.as_p}}
+            <label style="color: #D6A2E8; " >Đã có tài khoản? <a href="{% url 'login' %}" style="font-weight:600">Đăng nhập</a></label>
+            <input type="submit" value="Đăng ký"> <br>
+
+        </form>
+    </div>
+
+
+</body>
+</html>

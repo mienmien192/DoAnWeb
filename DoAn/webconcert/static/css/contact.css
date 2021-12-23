@@ -1,0 +1,88 @@
+.contact{
+	min-height: 500px;
+
+	background-position: center;
+	background-size: cover;
+	position: relative;
+
+}
+.title_contact{
+	color: #fff;
+	padding: 70px 80px 0px 140px;
+	text-align: left;
+}
+.title_contact h2{
+	font-size: 17px;
+	font-weight: bold;
+	padding-bottom: 25px;
+}
+.title_contact p{
+	font-size: 15px;
+}
+.input_contact{
+	padding-left: 120px;
+	text-align: left;
+
+}
+.input_contact input{
+	padding: 8px 40px;
+	border: none;
+	border-radius: 3px;
+	margin-left: 20px;
+}
+.input_contact1 input{
+	padding: 40px 180px;
+	margin-left: 20px;
+	margin-top: 20px;
+
+}
+.input_contact .send{
+	color: #fff;
+	font-size: 15px;
+	margin-left: 20px;
+	margin-top: 20px;
+	padding: 8px 25px;
+}
+.input_contact .send:hover{
+	background: #fff;
+	color: #ffc000;
+	border: 1px solid #ffc000;
+}
+@media all and (max-width: 543px){
+	.title_contact{
+		position: absolute;
+		top: -49px;
+		left: -125px;
+		padding: 75px 11px 0px 140px;
+	}
+	.input_contact{
+		position: absolute;
+		top: 180px;
+		left: -125px;
+	}
+	.input_contact1 input{
+		padding: 35px 82px !important;
+		margin-left: 20px;
+		margin-top: 0 !important;
+	}
+	.input_contact input{
+		padding: 8px 82px;
+		border: none;
+		border-radius: 3px;
+		margin-top: 12px;
+	}
+	.input_contact .send{
+		margin-top: 20px;
+	}
+}
+#banner1{
+    background: url('../img/banner.gif');
+    background-position: center;
+    background-size: cover;
+    max-height: 200vh;
+    padding: 200px 0px;
+    color: #fff;
+    line-height: 30px;
+    margin-top: -25px;
+    font-family: 'Fredoka One', cursive;
+}

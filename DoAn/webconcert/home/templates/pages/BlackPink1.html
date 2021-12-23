@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<title>Pandora's Concept- About Us</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
+	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/BlackPink.css' %}">
+</head>
+<style>
+    #more{
+        display: none;
+    }
+</style>
+<body>
+	<!-- header -->
+		<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <div class="header container-fluid px-0">
+        <nav class="navbar navbar-expand-md justify-content-center navbar-dark fixed-top">
+            <a class="navbar-brand" href="#" style="font-family: 'Stick', sans-serif; font-size: 30px; font-weight: bold;"><span style="color: #D6A2E8;">Pandora's</span><span style="color: #d1d8e0 "> Concept</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="my menu">
+                <ul class="navbar-nav justify-content-center">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-target="submenu" data-toggle="dropdown">Services</a>
+                        <div class="dropdown-menu" id="submenu">
+                            <a href="#Ticket" class="dropdown-item">Book Ticket </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="" class="dropdown-item">Shop</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="" class="dropdown-item">Drink & Food</a>
+
+
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link dropdown-toggle" href="{% url 'artist' %}">Artists</a>
+
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="{% url 'aboutUs'%}" target="_blank">About Us</a></li>
+
+
+                    <li class="nav-item"><a class="nav-link" href="#">Contact
+					</a></li>
+
+                </ul>
+            </div>
+
+            <nav class="navbar navbar-expand-sm">
+                <form class="form-inline" action="">
+                    <i class="fa fa-search"></i>
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                </form>
+            </nav>
+
+            <div class="log">
+                {% if user.username %}
+                    <p style="color: #D6A2E8; font-family: 'Roboto', sans-serif;" >Xin chào, <a style="color: #D6A2E8; font-family: 'Roboto', sans-serif;" href="{% url 'profile' %}">{{ user.username }}</a></p>
+                    <p><a href="{% url 'logout' %}" class="logOut">LOGOUT</a></p>
+                {% else %}
+                    <p><a class="logIn" href="{% url 'login' %}">LOGIN</a> <a class="signUp" href="{% url 'register' %}">SIGN UP</a></p>
+                {% endif %}
+            </div>
+        </nav>
+
+    </div>
+
+	<section class="inner-page-breadcrumb">
+    	<div class="breadcrumb-bg py-5">
+      		<div class="container pt-lg-5 pt-md-3 p-lg-4 pb-md-3 my-lg-3">
+        		<div class="infor">
+                    <h1>The Album</h1>
+                    <p>Album (viết hoa toàn bộ cách điệu) là album phòng thu tiếng Hàn đầu tiên (thứ hai về tổng thể) của nhóm nhạc nữ Hàn Quốc Blackpink, được phát hành vào ngày 2 tháng 10 năm 2020, bởi YG Entertainment và Interscope. Đây là tác phẩm dài tập đầu tiên của nhóm kể từ khi ra mắt vào năm 2016. Đối với album, Blackpink đã thu âm hơn mười bài hát mới và làm việc với nhiều nhà sản xuất, bao gồm Teddy, Tommy Brown, R. Tee, Steven Franks và 24 bài hát. lọt vào danh sách ca khúc cuối cùng, bao gồm hai lần hợp tác: "Ice Cream" với Selena Gomez và "Bet You Wanna" với Cardi B. Album khám phá khía cạnh trưởng thành của nhóm thông qua các chủ đề về tình yêu và sự phức tạp của quá trình trưởng thành.
+                        Về mặt âm nhạc, Album sử dụng các yếu tố pop, R&B, hip hop, EDM và trap..</span></p>
+
+                           <button onclick="Read()" id="readBtn">Read more</button>
+                </div>
+                <div class="slider">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide" style="background-image:url({% static './img/bp_album.jpg'%})"></div>
+                          <div class="swiper-slide" style="background-image:url({% static './img/blackpink.jpg'%})"></div>
+                          <div class="swiper-slide" style="background-image:url({% static './img/blackpink1.jpg'%})"></div>
+                          <div class="swiper-slide" style="background-image:url({% static './img/jisoo.jpg'%})"></div>
+                          <div class="swiper-slide" style="background-image:url({% static './img/Jennie.jpg'%})"></div>
+                          <div class="swiper-slide" style="background-image:url({% static './img/lisa2.jpg'%})"></div>
+                          <div class="swiper-slide" style="background-image:url({% static './img/rose.jpg'%})"></div>
+                          <div class="swiper-slide" style="background-image:url({% static './img/lisa1.jpg'%})"></div>
+                          <div class="swiper-slide" style="background-image:url({% static './img/jisoo1.jpg'%})"></div>
+                          <div class="swiper-slide" style="background-image:url({% static './img/jisoo2.jpeg'%})"></div>
+                          <div class="swiper-slide" style="background-image:url({% static './img/jennie1.jpg'%})"></div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+
+                    <!-- Swiper JS -->
+                    <script src="../package/swiper-bundle.min.js"></script>
+                </div>
+
+      		</div>
+    	</div>
+  	</section>
+
+      <section id="blackPink">
+          <div class="jisoo">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+
+        <div class="contain">
+            <h1>Jisoo</h1>
+            <p>Kim Ji-soo (Hangul: 김지수; sinh ngày 3 tháng 1 năm 1995), thường được biết đến với nghệ danh Jisoo, là một nữ ca sĩ thần tượng, diễn viên, người mẫu, người dẫn chương trình người Hàn Quốc. Cô là thành viên lớn tuổi nhất của nhóm nhạc nữ Hàn Quốc Blackpink do công ty giải trí YG Entertainment thành lập và quản lý.
+				Sinh ra tại thành phố Gunpo, tỉnh Gyeonggi, Jisoo gia nhập YG Entertainment vào năm 2011, trở thành thực tập sinh trong vòng 5 năm trước khi ra mắt cùng Blackpink vào tháng 8 năm 2016. Kể từ khi ra mắt, Jisoo cùng Blackpink đã từng bước trở thành hiện tượng toàn cầu, chinh phục thị trường Hoa Kỳ và nhiều quốc gia khác.</p>
+
+            <a href="#">Contact Now</a>'
+        </div>
+        <img src="{% static 'img/jisorm-removebg-preview.png' %}" alt="" style="width: 350px;">
+    </div>
+
+    <div class="jennie">
+        <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+
+        <div class="contain">
+            <h1>Jennie</h1>
+            <p>Jennie Kim (Hangul: 김제니; sinh ngày 16 tháng 1 năm 1996), thường được biết đến với nghệ danh Jennie (Hangul: 제니), là một nữ ca sĩ, rapper người Hàn Quốc, thành viên của nhóm nhạc nữ Blackpink do công ty giải trí YG Entertainment thành lập và quản lý.
+				Sinh ra và lớn lên ở Hàn Quốc, Jennie học tập tại New Zealand từ năm 8 tuổi trong 5 năm, trước khi trở về Hàn Quốc vào năm 2010. Cô ra mắt với tư cách là thành viên của nhóm nhạc nữ Blackpink vào tháng 8 năm 2016. Vào tháng 11 năm 2018, Jennie ra mắt solo với đĩa đơn "Solo". Bài hát thành công về mặt thương mại trong nước và quốc tế, đứng đầu cả Gaon Digital Chart và Billboard World Digital Songs Chart.</p>
+
+            <a href="#">Contact Now</a>
+        </div>
+        <img src="{% static 'img/jenniebg-removebg-preview.png' %}" alt="" style="width: 250px;">
+    </div>
+
+    <div class="lisa">
+        <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+
+        <div class="contain">
+            <h1>Lisa</h1>
+            <p>Lalisa Manobal (tiếng Thái: ปราณปรียา มโนบาล), tên khai sinh là Pranpriya Manobal (tiếng Thái: ปราณปรียา มโนบาล, sinh ngày 27 tháng 3 năm 1997), thường được biết đến với nghệ danh Lisa (tiếng Triều Tiên: 리사) là một nữ ca sĩ, rapper, người mẫu, vũ công người Thái Lan. Cô là thành viên nhỏ tuổi nhất của nhóm nhạc nữ Hàn Quốc Blackpink do công ty YG Entertainment thành lập và quản lý.</p>
+
+            <a href="#">Contact Now</a>
+        </div>
+        <img src="{% static 'img/lisabg-removebg-preview.png '%}" alt="" style="width: 200px;">
+    </div>
+
+    <div class="rose">
+        <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+
+        <div class="contain">
+            <h1>Rose</h1>
+            <p>Park Chae-young (Hangul: 박채영; Hanja: 朴彩英; Hán-Việt: Phác Thái Anh; sinh ngày 11 tháng 2 năm 1997; tên tiếng Anh là Roseanne Park), thường được biết đến với nghệ danh Rosé (Hangul: 로제) là một nữ ca sĩ, người mẫu, người New Zealand gốc Hàn Quốc. Sinh ra ở New Zealand và lớn lên ở Úc, Rosé ký hợp đồng với công ty YG Entertainment của Hàn Quốc sau một buổi thử giọng vào năm 2012 và đào tạo tại đây trong bốn năm. Cô ra mắt với tư cách là giọng ca chính của nhóm nhạc nữ Blackpink vào tháng 8 năm 2016 và ra mắt solo với album đĩa đơn R vào tháng 3 năm 2021.</p>
+
+            <a href="#">Contact Now</a>
+        </div>
+        <img src="{% static 'img/rosebg-removebg-preview.png' %}" alt="" style="width: 250px;">
+    </div>
+
+      </section>
+
+
+
+  	<!-- footer -->
+		    <footer>
+        <div class="container">
+            <div class="cot1 cot" style="width: 50%">
+                <a class="navbar-brand" href="#" style="font-family: 'Stick', sans-serif; font-size: 35px; font-weight: bold;"><span style="color: #D6A2E8;">Pandora's</span><span style="color: #d1d8e0 "> Concept</span></a>
+                <br>
+                <ul class="contact_footer" style="list-style: none; line-height: 30px; font-family: 'Roboto', sans-serif;">
+                    <li><i class="fa fa-map-marker"></i>
+                        <span>157 Nguyễn Gia Trí (D2) - quận Bình Thạnh, Tp Hồ Chí Minh</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-mobile"></i>
+                        <span>1800 6750</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope"></i>
+                        <span>support@music.com.vn</span>
+                    </li>
+                    <li>
+                        <img src="{% static 'img/cahoihoang.png'%}" style="width: 90px; height: 100px" alt="">
+                        <img src="{% static 'img/tientien.png'%}" style="width: 90px; height: 100px" alt="">
+                        <img src="{% static 'img/thinhsuy.png'%}" style="width: 90px; height: 100px" alt="">
+                        <img src="{% static 'img/osad.png'%}" style="width: 90px; height: 100px" alt="">
+                        <img src="{% static 'img/monocycle.png'%}" style="width: 90px; height: 100px" alt="">
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="cot2 cot" style="width: 50%">
+                <h2 style="color: #fff; margin-top: 10px; font-family: 'Fredoka One', cursive; ">Contact Us</h2>
+                <div class="input_contact">
+                    <input type="text" placeholder="Full name" name="">
+
+                    <input type="text" placeholder="Email" name=""> <br>
+                    <div class="input_contact2">
+                        <input type="text" placeholder="Write here your contact"> <br>
+                    </div>
+                    <button class="send">Send Contact</button>
+                    <ul class="contact_icon" style="list-style: none; line-height: 25px;font-family: 'Fredoka One', cursive;color:#acacac">
+                    <li>
+                        <i class="fa fa-facebook"></i>
+                        <a href="#" style="text-decoration: none; padding-left: 20px;"> Facebook</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-youtube-play"></i>
+                        <a href="#" style="text-decoration: none; padding-left: 20px ">Youtube</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-twitter"></i>
+                        <a href="#" style="text-decoration: none;padding-left: 20px">Twitter</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-instagram"></i>
+                        <a href="#" style="text-decoration: none; padding-left: 20px">Instagram</a>
+                    </li>
+                </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 20,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: true,
+
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            loop:true
+            });
+
+            function Read() {
+                var dots = document.getElementById("dots");
+                var moreText = document.getElementById("more");
+                var btnText = document.getElementById("readBtn");
+
+                if (dots.style.display === "none") {
+                    dots.style.display = "inline";
+                    btnText.innerHTML = "Read more";
+                    moreText.style.display = "none";
+                } else {
+                    dots.style.display = "none";
+                    btnText.innerHTML = "Read less";
+                    moreText.style.display = "inline";
+                }
+            }
+
+      </script>
+</body>
+</html>

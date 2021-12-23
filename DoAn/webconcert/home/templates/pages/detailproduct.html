@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+     {% load static %}
+	<title>PANDORA'S CONCEPT</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        *{
+	margin: 0;
+	padding: 0;
+}
+
+/*-------------------header-----------------*/
+
+.navbar .navbar-brand {
+    margin: 30px 80px;
+}
+
+li a #submenu .dropdown-item {
+    color: #000 !important;
+}
+
+.navbar ul li a {
+    padding-right: 10px;
+    color: #D6A2E8 !important;
+    align-items: center;
+    font-size: 18px;
+    margin-right: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Fredoka One', cursive;
+}
+
+.navbar ul li a:hover {
+    color: #ff006e !important;
+    opacity: 1;
+}
+
+.navbar input {
+    border-radius: 5px;
+    padding-left: 5px;
+    margin-right: 10px;
+    display: flex;
+    width: 150px;
+    height: 40px;
+    border: none;
+}
+
+.navbar .logIn,
+.signUp {
+    text-decoration: none;
+    color: #D6A2E8;
+    font-size: 17px;
+    border: none;
+    padding: 10px 10px;
+    outline: none;
+    font-weight: bold;
+    font-family: 'Fredoka One', cursive;
+}
+
+.navbar .logIn:hover {
+    color: #ff006e;
+    text-decoration: none;
+}
+.navbar .logOut:hover {
+    color: #ff006e;
+    text-decoration: none;
+}
+.navbar .logOut {
+    color: #D6A2E8;
+    text-decoration: none;
+}
+
+.navbar .signUp:hover {
+    color: #ff006e;
+    text-decoration: none;
+}
+
+.navbar-toggle {
+    justify-content: center;
+}
+
+
+.product-details {
+	padding-top: 80px;
+}
+
+.spad {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+body {
+
+    height: 100%;
+    font-family: 'Fredoka One', cursive;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+    text-align: left;
+    background-image: linear-gradient(50deg,#120e1b,#3a2b58);
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+
+
+}
+
+.col-lg-6 , .col-md-6 {
+	position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.product__details__pic__item {
+    margin-bottom: 20px;
+}
+
+.product__details__pic__item img {
+    min-width: 100%;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    border-style: none;
+}
+
+@media only screen and (max-width: 767px)
+.product__details__pic {
+    margin-bottom: 40px;
+}
+
+.product__details__text h3 {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+h3 {
+    font-size: 30px;
+    color: #fff;
+}
+
+.product__details__text .product__details__price {
+    font-size: 30px;
+    color: #dd2222;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.product__details__text p {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+
+.pro-qty {
+    width: 140px;
+    height: 50px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    background: #f5f5f5;
+    margin-bottom: 5px;
+}
+
+.pro-qty input {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    color: #6f6f6f;
+    width: 50px;
+    border: none;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+button, input {
+    overflow: visible;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+
+
+.product__details__text .primary-btn {
+    padding: 16px 28px 14px;
+    margin-right: 6px;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+.primary-btn {
+    display: inline-block;
+    font-size: 14px;
+    padding: 10px 28px 10px;
+    color: #6F1E51;;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 20px;
+    background: linear-gradient(#9796f0, #fbc7d4);;
+    letter-spacing: 2px;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.product__details__text ul {
+    border-top: 1px solid #ebebeb;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+ul, ol {
+    padding: 0;
+    margin: 0;
+}
+
+.product__details__text ul li {
+    font-size: 16px;
+    color: #1c1c1c;
+    list-style: none;
+    line-height: 36px;
+}
+
+.product__details__text ul li b {
+    font-weight: 700;
+    width: 170px;
+    display: inline-block;
+    color: #fff;
+}
+
+.product__details__text ul li .share {
+    display: inline-block;
+}
+
+.product__details__text ul li .share a {
+    display: inline-block;
+    font-size: 15px;
+    color: #1c1c1c;
+    margin-right: 25px;
+}
+
+
+.product__details__tab .nav-tabs {
+    border-bottom: none;
+    justify-content: center;
+    position: relative;
+}
+
+.nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.nav-tabs .nav-link.active {
+    color: #fff;
+    margin: 30px;
+}
+
+.product__details__tab .nav-tabs li a {
+    font-size: 16px;
+    color: #999999;
+    font-weight: 700;
+    border: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 0;
+}
+
+.product__details__tab p {
+    font-size: 16px;
+    font-family: "Cairo", sans-serif;
+    color: #6f6f6f;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0 0 15px 0;
+}
+
+
+    </style>
+
+</head>
+
+
+    <!-- header -->
+   <body>
+
+    <div class="header container-fluid px-0">
+        <nav class="navbar navbar-expand-md justify-content-center navbar-dark fixed-top">
+            <a class="navbar-brand" href="#" style="font-family: 'Stick', sans-serif; font-size: 30px; font-weight: bold;"><span style="color: #D6A2E8;">Pandora's</span><span style="color: #d1d8e0 "> Concept</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="my menu">
+                <ul class="navbar-nav justify-content-center">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-target="submenu" data-toggle="dropdown">Services</a>
+                        <div class="dropdown-menu" id="submenu">
+                            <a href="#Ticket" class="dropdown-item">Book Ticket </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="" class="dropdown-item">Shop</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#food" class="dropdown-item">Drink & Food</a>
+
+
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link dropdown-toggle" href="#" data-target="submenu" data-toggle="dropdown">Artists</a>
+
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="/aboutUs" target="_blank">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">Contact
+                    </a></li>
+
+                </ul>
+            </div>
+
+            <nav class="navbar navbar-expand-sm">
+                <form class="form-inline" action="">
+                    <i class="fa fa-search"></i>
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                </form>
+            </nav>
+
+            <div class="log">
+                {% if user.username %}
+                    <p style="color: #D6A2E8">Xin chào, {{ user.username }}</p>
+                    <p><a href="{% url 'logout' %}" class="logOut">LOGOUT</a></p>
+                {% else %}
+                    <p><a class="logIn" href="{% url 'login' %}">LOGIN</a> <a class="signUp" href="{% url 'register' %}">SIGN UP</a></p>
+                {% endif %}
+            </div>
+        </nav>
+
+    </div>
+
+    <section class="product-details spad">
+        <div class="container">
+            <div class="row">
+                {% for product in product %}
+                <div class="col-lg-6 col-md-6 col-md-3">
+                    <div class="product__details__pic">
+                        <div class="product__details__pic__item">
+                            {% if product.productImg %}
+                            <img class="product__details__pic__item--large" src="{{product.productImg.url}}" alt="food" style="width:200px; height: 200px" >
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-md-3">
+                    <div class="product__details__text">
+                        <h3>{{product.title}}</h3>
+
+                        <div class="product__details__price">{{product.price}}</div>
+                        <p>Food</p>
+                        {% endif %}
+                        <a href="" class="primary-btn">Thêm vào cart</a>
+                        <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                        <ul>
+                            <li><b>Number</b> <span style="color: #fff;">Còn 50 bánh</span></li>
+                            <li><b>Ordered</b> <span style="color: #fff;">50 bánh</span></li>
+                            <li><b>Share</b>
+                                <div class="share" style="color: #fff;">
+                                    <a href="#" style="color: #fff;"><i class="fa fa-facebook"></i></a>
+                                    <a href="#" style="color: #fff;"><i class="fa fa-twitter"></i></a>
+                                    <a href="#" style="color: #fff;"><i class="fa fa-instagram"></i></a>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div >
+                    <br>
+                    <div class="product__details__tab">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"
+                                    aria-selected="true">Mô tả</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                                <div class="product__details__tab__desc">
+                                    <h6>Mô tả sảm phẩm</h6>
+                                    <p>{{product.description}}</p>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

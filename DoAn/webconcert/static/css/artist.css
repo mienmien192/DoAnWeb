@@ -1,0 +1,245 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+/*-------------------header-----------------*/
+.navbar .navbar-brand{
+	margin:30px 80px;
+	margin-left: 0px;	
+
+}
+li a #submenu .dropdown-item {
+	color: #000 !important;
+}
+.navbar ul li a{
+	padding-right: 10px;
+	color: #D6A2E8 !important;
+	align-items: center;
+	font-size: 18px;
+	margin-right: 10px;	
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: 'Fredoka One', cursive;
+}
+.navbar ul li a:hover{
+	color: #ff7f50	 !important;
+	opacity: 1;
+}
+.navbar input{
+	border-radius: 5px;
+	padding-left: 5px;
+	margin-right: 10px;
+	display: flex;
+	width: 150px;
+	height: 40px;
+	border: none;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    display: block;
+    color: var(--heading-color);
+    text-align: right;
+    float: right;
+}
+.navbar-toggle{
+	display: none;
+	justify-content: center;
+}
+.navbar-toggler-icon{
+	color: #eb3b5a;
+}
+.navbar .form-inline input{
+	padding-left: 25px;
+	
+}
+.navbar form{
+	position: relative;
+}
+.navbar form i{
+	position: absolute;
+	left: 15px;
+	transform: translate(-50%,-50%);
+	top: 50%;
+}
+.inner-page-breadcrumb{
+	background: url('../img/about-us.jpg');
+	background-position: center;
+	background-size: cover;
+	max-height: 100vh;
+	padding: 30px 60px;
+	color: #fff;
+	line-height: 30px;
+	margin-top: -25px;
+	font-family: 'Fredoka One', cursive;
+}
+@media (max-width: 991px) h2.title {
+    font-size: 38px;
+    margin-top: 20px;
+}
+h2.title {
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 50px;
+}
+h2 span{
+	font-size: 20px;
+}
+.inner-page-breadcrumb .container{
+	margin-top: -100px;
+}
+.breadcrumbs-custom-path li {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: #fff;
+    opacity: .9;
+    letter-spacing: .5px;
+}
+.title-w3l {
+    font-size: 38px;
+    line-height: 48px;
+    font-weight: 700;
+    color: #8e44ad;
+}
+p{
+	color: #bdc3c7;
+}
+
+footer{
+		background: linear-gradient(50deg,#42275a,#734b6d);
+	color: #acacac;
+}
+footer .container{
+	display: flex;
+	margin: 20px;
+
+}
+footer .cot1{
+	width: 40%;
+	margin-right: 20px;
+
+}
+.cot1 .contact_footer li i{
+	text-decoration: none;
+	list-style: none;
+}
+footer .cot2{
+	width: 20%;
+	
+	margin-right: 20px;
+
+}
+footer .cot2 ul li i:hover{
+	color: #fff;
+}
+footer .cot2 ul li a{
+	color: #acacac;
+}
+footer .cot2 ul li a:hover{
+	color: #fff !important;
+}
+footer .cot3{
+	width: calc(40% - 40px);
+
+}
+@media (max-width: 720px){
+	footer .container{
+		flex-direction: column;
+	}
+	footer .cot{
+		width: 100%;
+		margin-bottom: 40px;
+	}
+}
+footer .input_contact{
+	
+	text-align: left;
+}
+footer .input_contact input{
+	padding: 5px 20px;
+	border: none;
+	border-radius: 3px;
+	margin-top: 20px;
+
+}
+footer .input_contact .send{
+	color: #fff;
+	font-size: 15px;
+	margin-top: 20px;
+	padding: 8px 25px;
+	border-radius: 6px;
+	border: none;
+	background:#e84393;
+	font-family: 'Fredoka One', cursive;
+}
+footer .input_contact .send:hover{
+	color: #fff;
+	background: green;
+
+}
+
+footer .input_contact2 input{
+	padding: 40px 160px;
+
+}
+
+/*article*/
+.article .navbar ul {
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.article .navbar ul li {
+  border-right:1px solid #bbb;
+}
+
+.article .navbar li a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+.article .navbar .nav-item a{
+	padding-left: 60px;
+	padding-right: 60px;
+}
+.article .navbar .nav-item.active .nav-link{
+	background-color: #778ca3;
+	color: #ED4C67;
+}
+
+/*artistlist*/
+.artistlist ul.list{
+	margin-bottom: 40px;
+	display: flex;
+	text-align: center;
+}
+.artistlist li.odd{
+	display: block;
+	padding: 5px;
+	text-align: center;
+
+}
+.artistlist .inner img{
+	padding-top: 10px;
+	padding-left: 20px;
+	padding-right: 20PX;
+	width: 100%;
+	height: 150px;
+}
+.artistlist .displayName strong
+{
+	padding: 100px;
+	color: #f78fb3;
+}
+
+
+

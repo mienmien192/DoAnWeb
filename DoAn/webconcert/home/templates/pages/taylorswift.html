@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<title>Pandora's Concept- About Us</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
+	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/taeyeon.css' %}">
+</head>
+<body>	
+	<!-- header -->
+	<div class="header container-fluid px-0">
+        <nav class="navbar navbar-expand-md justify-content-center navbar-dark fixed-top">
+            <a class="navbar-brand" href="#" style="font-family: 'Stick', sans-serif; font-size: 30px; font-weight: bold;"><span style="color: #D6A2E8;">Pandora's</span><span style="color: #d1d8e0 "> Concept</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="my menu">
+                <ul class="navbar-nav justify-content-center">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-target="submenu" data-toggle="dropdown">Services</a>
+                        <div class="dropdown-menu" id="submenu">
+                            <a href="#Ticket" class="dropdown-item">Book Ticket </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="" class="dropdown-item">Shop</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="" class="dropdown-item">Drink & Food</a>
+
+
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link dropdown-toggle" href="#" data-target="submenu" data-toggle="dropdown">Artists</a>
+
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="/aboutUs" target="_blank">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">Contact
+					</a></li>
+
+                </ul>
+            </div>
+
+            <nav class="navbar navbar-expand-sm">
+                <form class="form-inline" action="">
+                    <i class="fa fa-search"></i>
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                </form>
+            </nav>
+
+            <div class="log">
+                {% if user.username %}
+                    <p style="color: #D6A2E8">Xin chào, <a href="{% url 'profile' %}">{{ user.username }}</a></p>
+                    <p><a href="{% url 'logout' %}" class="logOut">LOGOUT</a></p>
+                {% else %}
+                    <p><a class="logIn" href="{% url 'login' %}">LOGIN</a> <a class="signUp" href="{% url 'register' %}">SIGN UP</a></p>
+                {% endif %}
+            </div>
+        </nav>
+
+    </div>
+
+	<section class="inner-page-breadcrumb">
+    	<div class="breadcrumb-bg py-5">
+      		<div class="container pt-lg-5 pt-md-3 p-lg-4 pb-md-3 my-lg-3">
+        		<h2 class="title pt-5">ARTIST</h2>
+        		<ul class="breadcrumbs-custom-path mt-3 text-center">          			
+       				<span>
+                     	Introduction of the top celebrities of PANDORA'S CONCEPT, from artists, actors, musical actors, entertainers.
+                    </span>
+        		</ul>
+      		</div>
+    	</div>
+  	</section>
+
+  	<!--artist-->
+  	<div class="article">
+  		<div class="pageTitle"><p class="eng">ARTIST<span></span></p></div>
+  		<div class="artistProfileBox">
+  			<div class="artistImg"><img src="{% static './img/taylorswift.jpg'%}" alt="TAYLOR SWIFT"></div>
+  			<div class="artistContent">
+  				<div class="artistProfile textbox">
+  					<div class="profileTitleBox">
+                        <strong class="profileTitle">TAYLOR SWIFT<br/><span>Republic Records</span>
+                        </strong>
+                    </div>
+                    <p><br/><br/><br/>[Debut day] <br/> 2006-10-24 <br/><br/>[Tác phẩm đại diện] <br/>You Belong To Me, Shake It Off, I don't wanna live forever, You Need To Calm Down,....</p>
+  				</div>
+  				<div class="profileAlbum">
+  					<h3>ALBUM</h3>
+  					<div class="profileAlbumlist">
+  						<div class="slickBn">
+  							<div class="one">
+                                <img src="{% static './img/1989.png'%}" alt="1989">
+                                <strong>1989</strong>
+                                <p>TAYLOR SWIFT</p>
+                                <span>2014-10-27</span>
+                            </div> 
+  							<div class="one">
+                                <img src="{% static './img/reputation.png'%}" alt="reputation">
+                                <strong>REPUTATION</strong>
+                                <p>TAYLOR SWIFT</p>
+                                <span>2017-11-10</span>
+                            </div>
+                            <div class="one">
+                                <img src="{% static './img/folklore.png'%}" alt="folklore">
+                                <strong>FOLKLORE</strong>
+                                <p>TAYLOR SWIFT</p>
+                                <span>2020-07-24</span>
+                            </div>
+                            <div class="one">
+                                <img src="{% static './img/fearless.png'%}" alt="fearless">
+                                <strong>FEARLESS (TAYLOR SWIFT VERSION)</strong>
+                                <p>TAYLOR SWIFT</p>
+                                <span>2021-04-09</span>
+                            </div>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  		<a href="{% url 'artist'%}" class="listBtn">ARTIST LIST</a>
+  	</div>
+	
+
+  	<!-- footer -->
+<!--	<footer>-->
+<!--	<div class="container">-->
+<!--		<div class="cot1 cot">-->
+<!--			<a class="navbar-brand" href="#" style="font-family: 'Stick', sans-serif; font-size: 35px; font-weight: bold;"><span style="color: #D6A2E8;">Pandora's</span><span style="color: #d1d8e0 "> Concept</span></a>-->
+<!--			<br>-->
+<!--			<ul class="contact_footer" style="list-style: none; line-height: 30px; font-family: 'Roboto', sans-serif;">-->
+<!--				<li><i class="fa fa-map-marker" ></i>-->
+<!--					<span>157 Nguyễn Gia Trí (D2) - quận Bình Thạnh, Tp Hồ Chí Minh</span>-->
+<!--				</li>-->
+<!--				<li>-->
+<!--					<i class="fa fa-mobile"></i>-->
+<!--					<span>1800 6750</span>-->
+<!--				</li>-->
+<!--				<li>-->
+<!--					<i class="fa fa-envelope"></i>-->
+<!--					<span>support@music.com.vn</span>-->
+<!--				</li>-->
+<!--				<li>-->
+<!--					<img src="img/cahoihoang.png" style="width: 90px; height: 100px">-->
+<!--					<img src="img/tientien.png" style="width: 90px; height: 100px">-->
+<!--					<img src="img/thinhsuy.png" style="width: 90px; height: 100px">-->
+<!--					<img src="img/osad.png" style="width: 90px; height: 100px">-->
+<!--					<img src="img/namkun.png" style="width: 90px; height: 100px">-->
+<!--					<img src="img/monocycle.png" style="width: 90px; height: 100px">-->
+<!--				</li>-->
+<!--			</ul>-->
+<!--		</div>-->
+
+
+<!--		<div class="cot2 cot">-->
+<!--			<h2 style="color: #fff; margin-top: 10px; font-family: 'Fredoka One', cursive; ">About Us</h2>-->
+<!--			<br>-->
+<!--			<p style="line-height: 25px; font-family: 'Fredoka One', cursive;">Với đội ngũ nhân viên chuyên nghiệp, Pandora's Concert sẽ đem đến cho khách hàng những trải nghiệm tốt nhất từ các concert. Hãy đến với chúng tôi để có những phút giây tuyện vời bên những giọng hát mà bạn yêu thích. Luôn luôn hỗ trợ các bạn. Có thắc mắc cứ liên hệ về tổng đài để được giải đáp. Chúng tôi xin chân thành cảm ơn.</p>-->
+<!--			<ul class="contact_icon" style="list-style: none; line-height: 25px;font-family: 'Fredoka One', cursive;color:#acacac">-->
+<!--				<li >-->
+<!--					<i class="fa fa-facebook" ></i>-->
+<!--					<a href="#" style="text-decoration: none; padding-left: 20px;"> Facebook</a>-->
+<!--				</li>-->
+<!--				<li>-->
+<!--					<i class="fa fa-youtube-play"></i>-->
+<!--					<a href="#" style="text-decoration: none; padding-left: 20px ">Youtube</a>-->
+<!--				</li>-->
+<!--				<li>-->
+<!--					<i class="fa fa-twitter" ></i>-->
+<!--					<a href="#" style="text-decoration: none;padding-left: 20px">Twitter</a>-->
+<!--				</li>-->
+<!--				<li>-->
+<!--					<i class="fa fa-instagram"></i>-->
+<!--					<a href="#" style="text-decoration: none; padding-left: 20px">Instagram</a>-->
+<!--				</li>-->
+<!--			</ul>-->
+<!--		</div>-->
+<!--		<div class="cot3 cot">-->
+<!--			<h2 style="color: #fff; margin-top: 10px; font-family: 'Fredoka One', cursive; ">Contact Us</h2>-->
+<!--			<div class="input_contact">-->
+<!--				<input type="text" placeholder="Full name" name="">-->
+<!--				<input type="text" placeholder="Email" name=""> <br>-->
+<!--				<div class="input_contact2">-->
+<!--					<input type="text" placeholder="Write here your contact_icon"> <br>-->
+<!--				</div>-->
+<!--				<button class="send">Send Contact</button>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--	</footer>-->
+</body>
+</html>

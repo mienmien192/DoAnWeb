@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<title>Pandora's Concept- About Us</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
+	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/taeyeon.css' %}">
+</head>
+<body>	
+	<!-- header -->
+	<div class="header container-fluid px-0">
+        <nav class="navbar navbar-expand-md justify-content-center navbar-dark fixed-top">
+            <a class="navbar-brand" href="#" style="font-family: 'Stick', sans-serif; font-size: 30px; font-weight: bold;"><span style="color: #D6A2E8;">Pandora's</span><span style="color: #d1d8e0 "> Concept</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="my menu">
+                <ul class="navbar-nav justify-content-center">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-target="submenu" data-toggle="dropdown">Services</a>
+                        <div class="dropdown-menu" id="submenu">
+                            <a href="#Ticket" class="dropdown-item">Book Ticket </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="" class="dropdown-item">Shop</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="" class="dropdown-item">Drink & Food</a>
+
+
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link dropdown-toggle" href="#" data-target="submenu" data-toggle="dropdown">Artists</a>
+
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="/aboutUs" target="_blank">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">Contact
+					</a></li>
+
+                </ul>
+            </div>
+
+            <nav class="navbar navbar-expand-sm">
+                <form class="form-inline" action="">
+                    <i class="fa fa-search"></i>
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                </form>
+            </nav>
+
+            <div class="log">
+                {% if user.username %}
+                    <p style="color: #D6A2E8">Xin chào, <a href="{% url 'profile' %}">{{ user.username }}</a></p>
+                    <p><a href="{% url 'logout' %}" class="logOut">LOGOUT</a></p>
+                {% else %}
+                    <p><a class="logIn" href="{% url 'login' %}">LOGIN</a> <a class="signUp" href="{% url 'register' %}">SIGN UP</a></p>
+                {% endif %}
+            </div>
+        </nav>
+
+    </div>
+
+	<section class="inner-page-breadcrumb">
+    	<div class="breadcrumb-bg py-5">
+      		<div class="container pt-lg-5 pt-md-3 p-lg-4 pb-md-3 my-lg-3">
+        		<h2 class="title pt-5">ARTIST</h2>
+        		<ul class="breadcrumbs-custom-path mt-3 text-center">          			
+       				<span>
+                     	Introduction of the top celebrities of PANDORA'S CONCEPT, from artists, actors, musical actors, entertainers.
+                    </span>
+        		</ul>
+      		</div>
+    	</div>
+  	</section>
+
+  	<!--artist-->
+  	<div class="article">
+  		<div class="pageTitle"><p class="eng">ARTIST<span></span></p></div>
+  		<div class="artistProfileBox">
+  			<div class="artistImg"><img src="{% static './img/taeyeon.jpg'%}" alt="TAEYEON"></div>
+  			<div class="artistContent">
+  				<div class="artistProfile textbox">
+  					<div class="profileTitleBox">
+                        <strong class="profileTitle">TAEYEON<br/><span>SM Entertainment</span>
+                        </strong>
+                    </div>
+                    <p><br/><br/><br/>[Debut day] <br/> 2007-08-05 <br/><br/>[Tác phẩm đại diện] <br/>I, Fine, Four Season, Rain,...</p>
+  				</div>
+  				<div class="profileAlbum">
+  					<h3>ALBUM</h3>
+  					<div class="profileAlbumlist">
+  						<div class="slickBn">
+  							<div class="one">
+                                <img src="{% static './img/i.jpg'%}" alt="i">
+                                <strong>I</strong>
+                                <p>TAEYEON</p>
+                                <span>2015-10-07</span>
+                            </div>
+                            <div class="one">
+                                <img src="{% static './img/myvoice.jpg'%}" alt="my voice">
+                                <strong>MY VOICE</strong>
+                                <p>TAEYEON</p>
+                                <span>2017-02-28</span>
+                            </div>
+                            <div class="one">
+                                <img src="{% static './img/somethingnew.jpg'%}" alt="something new">
+                                <strong>SOMETHING NEW</strong>
+                                <p>TAEYEON</p>
+                                <span>2018-06-18</span>
+                            </div>                            
+                            <div class="one">
+                                <img src="{% static './img/what.png'%}" alt="what do i call you">
+                                <strong>WHAT DO I CALL YOU</strong>
+                                <p>TAEYEON</p>
+                                <span>2020-12-15</span>
+                            </div>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  		<a href="{% url 'artist'%}" class="listBtn">ARTIST LIST</a>
+  	</div>
+	
+
+  	<!-- footer -->
+	{% static './'%}
+</body>
+</html>

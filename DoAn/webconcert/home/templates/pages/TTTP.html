@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 {% load static %}
+	<title>Pandora's Concept- Upcoming Event</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
+	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/TTTP.css' %}">
+</head>
+<style>
+    #more{
+        display: none;
+    }
+</style>
+<body>	
+	<!-- header -->
+	<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <div class="header container-fluid px-0">
+        <nav class="navbar navbar-expand-md justify-content-center navbar-dark fixed-top">
+            <a class="navbar-brand" href="#" style="font-family: 'Stick', sans-serif; font-size: 30px; font-weight: bold;"><span style="color: #D6A2E8;">Pandora's</span><span style="color: #d1d8e0 "> Concept</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="my menu">
+                <ul class="navbar-nav justify-content-center">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-target="submenu" data-toggle="dropdown">Services</a>
+                        <div class="dropdown-menu" id="submenu">
+                            <a href="#Ticket" class="dropdown-item">Book Ticket </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="" class="dropdown-item">Shop</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="" class="dropdown-item">Drink & Food</a>
+
+
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link dropdown-toggle" href="{% url 'artist' %}">Artists</a>
+
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="{% url 'aboutUs'%}" target="_blank">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">Contact
+					</a></li>
+
+                </ul>
+            </div>
+
+            <nav class="navbar navbar-expand-sm">
+                <form class="form-inline" action="">
+                    <i class="fa fa-search"></i>
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                </form>
+            </nav>
+
+            <div class="log">
+                {% if user.username %}
+                    <p style="color: #D6A2E8; font-family: 'Roboto', sans-serif;" >Xin chào, <a style="color: #D6A2E8; font-family: 'Roboto', sans-serif;" href="{% url 'profile' %}">{{ user.username }}</a></p>
+                    <p><a href="{% url 'logout' %}" class="logOut">LOGOUT</a></p>
+                {% else %}
+                    <p><a class="logIn" href="{% url 'login' %}">LOGIN</a> <a class="signUp" href="{% url 'register' %}">SIGN UP</a></p>
+                {% endif %}
+            </div>
+        </nav>
+
+    </div>
+
+	<section class="inner-page-breadcrumb">
+    	<div class="breadcrumb-bg py-5">
+      		<div class="container pt-lg-5 pt-md-3 p-lg-4 pb-md-3 my-lg-3">
+        		<div class="infor" style="font-family: 'Crimson Text', serif;">
+                    <h1 style="font-family: 'Crimson Text', serif;">Trải trái Trải phải</h1>
+                    <p>Thiều Bảo Trâm và Hiền Hồ bước vào cửa hàng “Ba điều ước” với tâm trạng tò mò. Họ là những cô gái trẻ hiện đại, “người chơi hệ chiếu mới” 
+                        chưa trải nhiều sự đời. Cả hai gặp thần đèn, rồi chìm vào thế giới mới, có những mong ước
+                         của bản thân: mong muốn trở nên xinh đẹp, có thể thoải mái mua sắm miễn phí, <span id="dots">...</span><span id="more">trải nghiệm thưởng thức những món
+                          món ngon hay khám phá những điều mới lạ. Ước mơ của hai cô gái trở 
+                          thành sự thật khi thần đèn đưa ra tấm thẻ thần "trải trái trải phải"
+                           giúp hai cô gái được trải nghiệm mọi điều tuyệt vời hằng mong ước.</span></p>
+
+                           <button onclick="Read()" id="readBtn">Read more</button>
+                </div>
+                <div class="slider">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide" style="background-image:url({% static './img/traitrai.jpg'%})"></div>
+                          <div class="swiper-slide" style="background-image:url({% static './img/tramhien.jpg'%})"></div>
+                          <div class="swiper-slide" style="background-image:url({% static './img/tram.jpg'%})"></div>
+                          <div class="swiper-slide" style="background-image:url({% static './img/hien.jpg'%})"></div>
+                          <div class="swiper-slide" style="background-image:url({% static './img/tram1.jpg'%})"></div>
+                          <div class="swiper-slide" style="background-image:url({% static './img/tramhien1.jpg'%})"></div>
+                          <div class="swiper-slide" style="background-image:url({% static './img/tramhien2.jpg'%})"></div>
+                          
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+    
+                    <!-- Swiper JS -->
+                    <script src="../package/swiper-bundle.min.js"></script>
+                </div>
+        		
+      		</div>
+    	</div>
+  	</section>
+      
+      <section id="tramHien">
+          <div class="card">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+
+        <div class="contain">
+            <h1 style="font-family: 'Crimson Text', serif;">Hiền Hồ</h1>
+            <p>Hiền Hồ sinh ngày 16-02-1997 tại Đắk Lắk. Hiền Hồ là cái tên được hầu hết các khán giả đặc biệt là những khán giả trẻ tuổi biết đến với vai trò là một ca sĩ từ chương trình The voice 2017. Hiền Hồ đặc biệt gây ấn tượng với khán giả truyền hình cũng như các vị ban giám khảo bởi chất giọng mạnh mẽ đầy nội lực của mình.</p>
+                
+            <a href="#">Contact Now</a>
+        </div>
+        <img src="{% static 'img/hienho.png'%}" alt="" style="width: 300px;">
+    </div>
+
+    <div class="card2">
+        <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+
+        <div class="contain">
+            <h1 style="font-family: 'Crimson Text', serif;">Thiều Bảo Trâm</h1>
+            <p>Thiều Bảo Trâm sinh ngày 9-9-1994 tại Tỉnh Thanh Hóa. Thiều Bảo Trâm là gương mặt triển vọng từ các cuộc thi lớn trên truyền hình như: Giọng hát Việt, Ngôi nhà âm nhạc hay Tiếng ca học đường.</p>
+           
+            <a href="#">Contact Now</a>
+        </div>
+        <img src="{% static 'img/thieubaotram.png'%}" alt="" style="width: 300px;">
+    </div>
+      </section>
+      
+  	
+  	<!-- footer -->
+	    <footer>
+        <div class="container">
+            <div class="cot1 cot" style="width: 50%">
+                <a class="navbar-brand" href="#" style="font-family: 'Stick', sans-serif; font-size: 35px; font-weight: bold;"><span style="color: #D6A2E8;">Pandora's</span><span style="color: #d1d8e0 "> Concept</span></a>
+                <br>
+                <ul class="contact_footer" style="list-style: none; line-height: 30px; font-family: 'Roboto', sans-serif;">
+                    <li><i class="fa fa-map-marker"></i>
+                        <span>157 Nguyễn Gia Trí (D2) - quận Bình Thạnh, Tp Hồ Chí Minh</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-mobile"></i>
+                        <span>1800 6750</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope"></i>
+                        <span>support@music.com.vn</span>
+                    </li>
+                    <li>
+                        <img src="{% static 'img/cahoihoang.png'%}" style="width: 90px; height: 100px" alt="">
+                        <img src="{% static 'img/tientien.png'%}" style="width: 90px; height: 100px" alt="">
+                        <img src="{% static 'img/thinhsuy.png'%}" style="width: 90px; height: 100px" alt="">
+                        <img src="{% static 'img/osad.png'%}" style="width: 90px; height: 100px" alt="">
+                        <img src="{% static 'img/monocycle.png'%}" style="width: 90px; height: 100px" alt="">
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="cot2 cot" style="width: 50%">
+                <h2 style="color: #fff; margin-top: 10px; font-family: 'Fredoka One', cursive; ">Contact Us</h2>
+                <div class="input_contact">
+                    <input type="text" placeholder="Full name" name="">
+
+                    <input type="text" placeholder="Email" name=""> <br>
+                    <div class="input_contact2">
+                        <input type="text" placeholder="Write here your contact"> <br>
+                    </div>
+                    <button class="send">Send Contact</button>
+                    <ul class="contact_icon" style="list-style: none; line-height: 25px;font-family: 'Fredoka One', cursive;color:#acacac">
+                    <li>
+                        <i class="fa fa-facebook"></i>
+                        <a href="#" style="text-decoration: none; padding-left: 20px;"> Facebook</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-youtube-play"></i>
+                        <a href="#" style="text-decoration: none; padding-left: 20px ">Youtube</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-twitter"></i>
+                        <a href="#" style="text-decoration: none;padding-left: 20px">Twitter</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-instagram"></i>
+                        <a href="#" style="text-decoration: none; padding-left: 20px">Instagram</a>
+                    </li>
+                </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 20,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: true,
+                
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            loop:true
+            });
+
+            function Read() {
+                var dots = document.getElementById("dots");
+                var moreText = document.getElementById("more");
+                var btnText = document.getElementById("readBtn");
+
+                if (dots.style.display === "none") {
+                    dots.style.display = "inline";
+                    btnText.innerHTML = "Read more"; 
+                    moreText.style.display = "none";
+                } else {
+                    dots.style.display = "none";
+                    btnText.innerHTML = "Read less"; 
+                    moreText.style.display = "inline";
+                }
+            }
+
+      </script>
+</body>
+</html>

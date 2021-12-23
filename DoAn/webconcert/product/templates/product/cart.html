@@ -1,0 +1,58 @@
+{% extends 'pages/header.html' %}
+
+{% load static %}
+{% block content %}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="box-element">
+            <a href="{% url 'home' %}" class="btn btn-outline-light">Go back</a>
+            <br>
+            <br>
+
+
+        </div>
+        <br>
+
+        <div class="box-element">
+            <div class="cart-row">
+                <div style="flex:2"></div>
+                <div style="flex:2"><strong>Item</strong></div>
+                <div style="flex:1"><strong>Price</strong></div>
+                <div style="flex:1"><strong>Quantity</strong></div>
+                <div style="flex:1"><strong>Total</strong></div>
+            </div>
+                {% for item in items %}
+
+            <div class="cart-row">
+                <div style="flex:2"><img class="row-image" src="{{Item.product.imageURL}}" alt=""></div>
+                <div style="flex:2"><strong>{{item.product.title}}</strong></div>
+                <div style="flex:1"><strong>{{item.product.price}}</strong></div>
+                <div style="flex:1">
+                    <p class="quantity">{{item.quantity}}</p>
+                    <div class="quantity">
+                        <img data-product="{{item.product.id}}" data-action="add"
+                             class="chg-quantity update-cart" src="{% static 'img/arrow-up.png' %}" alt="" >
+                        <img data-product="{{item.product.id}}" data-action="remove"
+                             class="chg-quantity update-cart" src="{% static 'img/arrow-down.png' %}" alt="">
+                    </div>
+                </div>
+                <div style="flex:1"><strong>{{item.get_total}}</strong></div>
+
+            </div>
+{% endfor %}
+        </div>
+        <table class="table">
+                <tr>
+                    <th><h5>Số lượng: <strong>{{order.get_cart_items}}</strong></h5></th>
+                    <th><h5>Tổng cộng: <strong>{{order.get_cart_total}} VND</strong></h5></th>
+                    <th>
+                        <a href="{% url 'checkout' %}"
+                           class="btn btn-outline-light" style="float: right; margin: 5px">Check out</a>
+                    </th>
+                </tr>
+            </table>
+    </div>
+</div>
+
+
+{% endblock content %}

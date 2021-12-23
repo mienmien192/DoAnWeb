@@ -1,0 +1,47 @@
+{% extends "pages/header.html" %}
+
+{%block title %}Contact{% endblock %}
+{%block content %}
+<div class="container-fluid pt-5">
+	<center ><h1 style="font-size: 40px; ">Contact Us</h1></center>
+	<br>
+	{% if message_name %}
+	<center>
+		<h1 style="font-family: 'Crimson Text', serif;">Thanks {{ message_name }}</h1>
+		<p style="font-size: 30px; font-family: 'Crimson Text', serif;" > Chúng tôi đã nhận được email của bạn và sẽ phản hồi nhanh thôi.</p>
+		<br> <br> <br>
+		{% else %}
+	</center>
+	<div class="row">
+		<div class="col-lg-6" style="padding-left: 0; padding-right: 0;">
+			<div class="contact">
+
+				<div class="title_contact" style="font-family: 'Crimson Text', serif;">
+					<p>Sứ mệnh của Pandora là công ty đi đầu trong chuyên nghiệp hóa ngành dịch vụ. Với các chuyên gia về xây dựng, kiến trúc, phong thủy kết hợp với các hạng mục, chúng tôi tự tin mang đến một sân chơi hoàn mĩ.</p>
+					<h2>Liên hệ với chúng tôi {{ message_name }}</h2>
+				</div>
+				<!--				form              -->
+				<form action="{% url 'contact' %}" method="POST">
+					{% csrf_token %}
+				<div class="input_contact">
+					<input type="text" placeholder="Fullname" name="message-name">
+					<input type="email" placeholder="Email" name="message-email">
+					<div class="input_contact1 pt-3">
+						<input type="text" placeholder="Write your contact here" name="message_type">
+					</div>
+						<button class="send btn btn-warning">Gửi liên hệ</button>
+				</div>
+				</form>
+			</div>
+		</div>
+		<div class="col-lg-6" style="padding-left: 0; padding-right: 0;">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.2324288146738!2d106.80161941462345!3d10.869918392258095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527587e9ad5bf%3A0xafa66f9c8be3c91!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgVGjDtG5nIHRpbiDEkEhRRyBUUC5IQ00!5e0!3m2!1svi!2s!4v1600423332728!5m2!1svi!2s"
+					width="100%" height="480" frameborder="0"
+					style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+			</iframe>
+		</div>
+	</div>
+
+</div>
+{% endif %}
+{% endblock %}

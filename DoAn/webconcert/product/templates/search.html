@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <title>PANDORA'S CONCERT</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <style type="text/css">
+        .swiper-container {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            margin-top: -450px;
+            margin-left: 700px;
+        }
+
+        .swiper-slide {
+            background-size: cover;
+            width: 250px;
+            height: 300px;
+        }
+        .log .logOut{
+        text-decoration: none;
+        color: #D6A2E8;
+        font-size: 17px;
+        border: none;
+        padding: 10px 10px;
+        outline: none;
+        font-weight: bold;
+        font-family: 'Fredoka One', cursive;
+        }
+        .log .logOut:hover {
+        color: #ff006e;
+        text-decoration: none;
+
+    }
+        #banner .event{
+        border-radius: 10px;
+        line-height: 80px;
+        padding: 20px 20px;
+        width: 220px;
+        height: 100px;
+        font-size: 22px;
+        color: #6F1E51;
+        border: solid 2px #fff;
+        transition: all .2s linear;
+        font-weight: 600;
+        background: linear-gradient(#9796f0, #fbc7d4);
+    }
+
+    #banner .event:hover {
+        background: linear-gradient(#c31432, #240b36);
+        color: #fff;
+        border-radius: 25px;
+        z-index: 1;
+    }
+<!----------------    drink&food----------------->
+.buy{
+	background: #e0e721;
+	color: #4a25aa;
+	font-size: 17px;
+	border:none;
+	padding: 10px 30px;
+	outline: none;
+	border-radius: 5px;
+	transition: all .2s linear;
+ 	font-weight: bold;
+}
+.buy:hover{
+	color: #32A560;
+	border-radius: 20px;
+	z-index: 1;
+
+}
+#food{
+
+	padding: 40px 0;
+	font-family: 'Fredoka One', cursive;
+}
+
+#food .food{
+	padding:40px 0px;
+	overflow: hidden;
+	margin:10px 0px;
+	border-radius: 5px;
+	transition: all .5s linear;
+	background: #f7f7f7;
+
+}
+#food .food .name{
+	font-size: 20px;
+	font-weight: bold;
+	color:#ff006e;
+	text-transform: uppercase;
+	margin:20px 0;
+}
+#food .food:hover{
+	background: #e84118;
+	border-radius:20px;
+}
+#food .food .price{
+	color:#42275a;
+	font-size: 25px;
+	font-weight: 900;
+	font-family: 'Fredoka One', cursive;
+}
+#food .food:hover .innerfood{
+	animation: show .5s linear;
+}
+#food .sold{
+	background: #ec398b;
+       color: #fff;
+	padding: 10px 30px;
+	z-index: 1;
+	border-radius:15px;
+    transition: all .2s linear;
+    border: 2px solid #fff ;
+
+ 	font-weight: bold;
+}
+#food .sold:hover{
+	background: #fff;
+	color: #ec398b;
+	 border: 2px solid #ec398b;
+}
+@keyframes show{
+	0%{
+		transform: translateY(110%);
+	}
+	100%{
+		transform: translateY(0%);
+	}
+}
+
+#food .food:before{
+
+	position: absolute;
+	transform: translate(-90%,60%) rotate(45deg);
+	content: '';
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: -1;
+}
+    </style>
+</head>
+<body>
+<!--    header-->
+    <div class="header container-fluid px-0">
+        <nav class="navbar navbar-expand-md justify-content-center navbar-dark fixed-top">
+            <a class="navbar-brand" href="#" style="font-family: 'Stick', sans-serif; font-size: 30px; font-weight: bold;"><span style="color: #D6A2E8;">Pandora's</span><span style="color: #d1d8e0 "> Concept</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="my menu">
+                <ul class="navbar-nav justify-content-center">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-target="submenu" data-toggle="dropdown">Services</a>
+                        <div class="dropdown-menu" id="submenu">
+                            <a href="#Ticket" class="dropdown-item">Book Ticket </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="" class="dropdown-item">Shop</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="/pro" class="dropdown-item">Drink & Food</a>
+
+
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link dropdown-toggle" href="{% url 'artist' %} "target="_blank">Artists</a>
+
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="{% url 'aboutUs'%}" target="_blank">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#Contact">Contact
+					</a></li>
+
+                </ul>
+            </div>
+
+            <nav class="navbar navbar-expand-sm">
+                <form class="form-inline" action="{% url 'search' %}" method="post" >
+                    {% csrf_token %}
+                    <i class="fa fa-search"></i>
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="searched">
+<!--                    <button class="btn-outline-secondary" type="submit">Search</button>-->
+                </form>
+            </nav>
+
+            <div class="log">
+                {% if user.username %}
+                    <p style="color: #D6A2E8; font-family: 'Roboto', sans-serif;" >Xin chào, <a style="color: #D6A2E8; font-family: 'Roboto', sans-serif;" href="{% url 'profile' %}">{{ user.username }}</a></p>
+                    <p><a href="{% url 'logout' %}" class="logOut">LOGOUT</a></p>
+                {% else %}
+                    <p><a class="logIn" href="{% url 'login' %}">LOGIN</a> <a class="signUp" href="{% url 'register' %}">SIGN UP</a></p>
+                {% endif %}
+            </div>
+        </nav>
+
+    </div>
+<!--    header-->
+<section>
+    <div id="banner">
+    <center>
+        {% if searched %}
+        <h2>You searched for {{searched}} </h2>
+        <br>
+         {% for product in products %}
+<!--            <div id="food" class="container-fluid" style="padding-top:60px;padding-bottom:60px">-->
+<!--                <div class="container">-->
+<!--                    <div class="row">-->
+<!--                         <div class="col-sm-6 col-md-3 text-center food" data-aos="fade-up">-->
+<!--                            <div class="innerFood">-->
+<!--                                {% if product.productImg %}-->
+<!--                                    <img src="{{product.productImg.url}}" alt="food" style="width:200px; height: 200px" >-->
+<!--                                    <h4>{{product.title}}</h4>-->
+<!--                                    <h4>{{product.price}}</h4>-->
+<!--                                {% endif %}-->
+<!--                                <button class="buy sold" data-toggle="modal" data-target="#myModal">GET IT</button>-->
+<!--                            </div>-->
+<!--                         </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div> <br>-->
+        {{product}}
+         {% endfor %}
+       {% else %}
+        <h2>Hey let's search</h2>
+        {% endif %}
+    </center>
+    </div>
+</section>
+</body>

@@ -1,0 +1,43 @@
+{% extends 'pages/base.html' %}
+
+{% block content %}
+
+<style>
+    button a{
+    color: #fff;
+
+}
+button a:hover{
+    color: red;
+    text-decoration: none;
+}
+
+</style>
+
+
+ <section>
+
+
+  <div id="food" class="container-fluid" style="padding-top:60px;padding-bottom:60px">
+    <div class="container">
+      <div class="row">
+          {% for product in product %}
+        <div class="col-sm-6 col-md-3 text-center food" data-aos="fade-up">
+
+            {% if product.productImg %}
+                <img src="{{product.productImg.url}}" alt="food" style="width:200px; height: 200px" >
+                <h4>{{product.title}}</h4>
+                <h4>{{product.price}} VND</h4>
+
+            <button data-product="{{product.id}}" data-action ="add" class="btn btn-warning update-cart">Add to cart</button>
+                {% endif %}
+        </div>
+          {% endfor %}
+      </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}
